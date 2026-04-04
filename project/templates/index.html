@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Smart Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<main class="quiz-container">
+    <h1>Smart Quiz — дизайн-проект помещения</h1>
+    <div class="progress-wrap">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+
+    <section class="step active" data-step="1">
+        <h2>Шаг 1: Тип помещения</h2>
+        <div class="options single" data-field="room_type">
+            <button type="button" data-value="Квартира">Квартира</button>
+            <button type="button" data-value="Дом">Дом</button>
+            <button type="button" data-value="Офис">Офис</button>
+        </div>
+    </section>
+
+    <section class="step" data-step="2">
+        <h2>Шаг 2: Зоны помещения</h2>
+        <div class="options multi" data-field="zones">
+            <button type="button" data-value="Кухня">Кухня</button>
+            <button type="button" data-value="Гостиная">Гостиная</button>
+            <button type="button" data-value="Спальня">Спальня</button>
+            <button type="button" data-value="Санузел">Санузел</button>
+        </div>
+    </section>
+
+    <section class="step" data-step="3">
+        <h2>Шаг 3: Площадь</h2>
+        <label for="areaRange">Площадь: <span id="areaValue">60</span> м²</label>
+        <input id="areaRange" type="range" min="20" max="300" step="5" value="60">
+    </section>
+
+    <section class="step" data-step="4">
+        <h2>Шаг 4: Стиль интерьера</h2>
+        <div class="options single" data-field="style">
+            <button type="button" data-value="Минимализм">Минимализм</button>
+            <button type="button" data-value="Сканди">Сканди</button>
+            <button type="button" data-value="Лофт">Лофт</button>
+        </div>
+    </section>
+
+    <section class="step" data-step="5">
+        <h2>Шаг 5: Бюджет</h2>
+        <div class="options single" data-field="budget">
+            <button type="button" data-value="до 1 000 000 ₽">до 1 000 000 ₽</button>
+            <button type="button" data-value="1 000 000 - 2 000 000 ₽">1 000 000 - 2 000 000 ₽</button>
+            <button type="button" data-value="от 2 000 000 ₽">от 2 000 000 ₽</button>
+        </div>
+    </section>
+
+    <section class="step" data-step="6">
+        <h2>Шаг 6: Контакты</h2>
+        <form id="contactForm" novalidate>
+            <input id="name" type="text" placeholder="Имя">
+            <input id="phone" type="tel" placeholder="Телефон" required>
+            <input id="email" type="email" placeholder="Email">
+            <textarea id="comment" placeholder="Комментарий"></textarea>
+            <label class="checkbox">
+                <input id="consent" type="checkbox" required>
+                Я согласен на обработку персональных данных
+            </label>
+        </form>
+    </section>
+
+    <p id="errorBox" class="error"></p>
+
+    <div class="nav-buttons">
+        <button id="prevBtn" type="button">Назад</button>
+        <button id="nextBtn" type="button" disabled>Далее</button>
+    </div>
+</main>
+<script src="{{ url_for('static', filename='js/quiz.js') }}" defer></script>
+</body>
+</html>
