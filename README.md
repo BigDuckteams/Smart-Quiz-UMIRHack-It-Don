@@ -2,7 +2,7 @@
 
 Production-oriented fullstack quiz app for collecting interior design project leads.
 
-## Project Structure
+## Структура проекта
 
 - `frontend/` — React + Vite + Tailwind + Framer Motion multi-step quiz.
 - `backend/` — Flask JSON API with CORS restriction, validation, sanitization, rate limiting, duplicate-submit protection, and secure headers.
@@ -25,18 +25,18 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## API
+Проект: смарт-квиз для сбора заявок на разработку дизайн-проекта помещения. Задача: упростить процесс сбора заказов для дизайнеров проектов
 
-`POST /api/quiz/submit`
+Ржевский Иван бэкенд, фронтенд
+Кардашьян Арсений бэкенд
+Грицай Ирина фронтенд
+Ковалёв Кирилл фронтенд
+Ржевский Роман фронтенд
 
-Response success:
-
-```json
-{ "success": true, "message": "Заявка успешно отправлена" }
-```
-
-Response error:
-
-```json
-{ "success": false, "message": "Не удалось отправить заявку" }
-```
+Пользователь открывает квиз,
+отвечает на вопрос первого шага,
+переходит к следующему шагу,
+проходит все вопросы по очереди,
+на последнем шаге вводит контактные данные,
+отправляет заявку,
+получает сообщение об успешной отправке.

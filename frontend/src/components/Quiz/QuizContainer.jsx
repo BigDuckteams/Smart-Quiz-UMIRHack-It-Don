@@ -63,7 +63,7 @@ export default function QuizContainer() {
     5: <Step5Budget value={form.budget} onSelect={(value) => setField('budget', value)} />,
     6: <Step6ContactForm form={form} setField={setField} />,
   };
-
+  
   return (
     <section className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl p-5 sm:p-8">
       {done ? (

@@ -46,7 +46,7 @@ function AdminLoginForm({ onSuccess }) {
 }
 
 function downloadCsv(rows) {
-  const headers = ['id', 'name', 'phone', 'email', 'room_type', 'zones', 'area', 'style', 'budget', 'comment', 'utm_source', 'created_at'];
+  const headers = ['id', 'имя', 'телефон', 'email', 'тип помещения', 'зоны', 'площадь', 'стиль интерьера', 'бюджет', 'комментарий пользователя', 'utm_source', 'created_at'];
   const csv = [headers.join(';')]
     .concat(
       rows.map((r) =>
