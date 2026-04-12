@@ -37,7 +37,7 @@ function IntroScreen({ onStart }) {
       <button
         type="button"
         onClick={onStart}
-        className="rounded-xl bg-gradient-to-r from-violet-500 to-indigo-500 px-6 py-3 font-semibold text-white shadow-xl transition hover:scale-[1.02]"
+        className="rounded-xl bg-gradient-to-r from-black-60 border to-indigo-700 px-6 py-3 font-semibold text-white shadow-xl transition hover:scale-[1.02]"
       >
         Начать квиз
       </button>
